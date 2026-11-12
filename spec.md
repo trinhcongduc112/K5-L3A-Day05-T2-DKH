@@ -330,7 +330,7 @@ Tương tự, `goi_y_bai_tap` hạ từ "Mình giúp bạn giải bài" xuống 
 - **Có lời gọi AI thật không:** **Không.** Đây là bản thiết kế tương tác (interactive mockup); các câu trả lời và kết quả tra cứu tài liệu được định nghĩa sẵn theo tình huống hoặc bộ lọc từ khóa tại client.
 - **Phần nào chạy thật trên giao diện · phần nào giả lập (mock):**
   - **Bấm và tương tác được từ đầu tới cuối:**
-    1. Chuyển đổi qua lại giữa các kịch bản bằng chip gợi ý hoặc nhập câu hỏi vào ô chat: **Tài liệu có câu sai** (Ca 1), **Đề xuất FAQ** (Ca 6), **Kiểm tra bài 3** (Ca 5), **Chưa rõ khái niệm** (Ca 3), cùng các ca `Slide 12` (Ca 2), `Chuyển TA lúc 23:00` (Ca 4), `Ngoại lai 45` (Ca 7), `P-value buổi 7` (Ca 8) và ca lạ bất kỳ.
+    1. Chuyển đổi qua lại giữa các kịch bản bằng chip gợi ý hoặc nhập câu hỏi vào ô chat: **Tài liệu có câu sai** (Ca 1), **Đề xuất FAQ** (Ca 6), **Kiểm tra bài 3** (Ca 5), **Chưa rõ khái niệm** (Ca 3), cùng các ca `Trung vị khác trung bình cộng` (happy path §3.2), `Slide 12` (Ca 2), `Chuyển TA lúc 23:00` (Ca 4), `Ngoại lai 45` (Ca 7), `P-value buổi 7` (Ca 8) và ca lạ bất kỳ.
     2. Đóng/mở hộp trích dẫn nguồn `BUỔI 3 · §3.3` có tô vàng câu cần xem lại và mở modal xem toàn bộ tài liệu `§3.1–§3.5`.
     3. Chỉnh sửa trực tiếp câu hỏi/câu trả lời trong thẻ **Bản nháp đề xuất FAQ**, bấm **Hủy bản nháp** hoặc **Gửi TA duyệt FAQ** qua hộp thoại xác nhận.
     4. Tạo phiếu báo cáo tài liệu/hỏi TA qua hộp thoại **Xem trước khi gửi TA**; chuyển sang tab **Yêu cầu của tôi** để bấm **Hoàn tác / Hủy phiếu** hoặc **Thu hồi đề xuất** khi phiếu đang ở trạng thái `Đang chờ TA`.
@@ -343,8 +343,8 @@ Tương tự, `goi_y_bai_tap` hạ từ "Mình giúp bạn giải bài" xuống 
 
 ### 5.2 Ảnh chụp màn hình có đánh số & ánh xạ thiết kế
 
-- **Ảnh 1:** [`prototype/screen-1-student.png`](prototype/screen-1-student.png) — Màn hình **Trợ lý học tập (Ca 1)**: Tài liệu `§3.3` có câu sai, hiển thị cảnh báo, bằng chứng tô vàng, phản ví dụ và nút chuyển TA.
-- **Ảnh 2:** [`prototype/screen-2-autonomy-ta.png`](prototype/screen-2-autonomy-ta.png) — Màn hình **Yêu cầu của tôi (Ca 6)**: Đề xuất FAQ đã gửi vào hàng chờ TA (`0 FAQ công khai`, trạng thái `Đang chờ TA`) và nút hoàn tác `Thu hồi đề xuất`.
+- **Ảnh 1:** [`prototype/screen-1-student.jpeg`](prototype/screen-1-student.jpeg) — Màn hình **Trợ lý học tập (Ca 1)**: Tài liệu `§3.3` có câu sai, hiển thị cảnh báo, bằng chứng tô vàng, phản ví dụ và nút chuyển TA.
+- **Ảnh 2:** [`prototype/screen-2-autonomy-ta.jpeg`](prototype/screen-2-autonomy-ta.jpeg) — Màn hình **Yêu cầu của tôi (Ca 6)**: Đề xuất FAQ đã gửi vào hàng chờ TA (`0 FAQ công khai`, trạng thái `Đang chờ TA`) và nút hoàn tác `Thu hồi đề xuất`.
 
 | Số trên ảnh     | Vị trí trên giao diện                                                                                                                | Thể hiện điều gì                                                                                                                                                             | Nguyên tắc HAX / PAIR                                                               | Mức tự chủ (§4)                                                               |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -352,7 +352,7 @@ Tương tự, `goi_y_bai_tap` hạ từ "Mình giúp bạn giải bài" xuống 
 | **2** _(Ảnh 1)_ | Hộp cảnh báo vàng `Nguồn có điểm cần xác minh — Đừng vội dùng kết luận này trước khi đối chiếu`                                      | Báo hiệu ngay bằng biểu tượng, chữ và màu vàng rằng tài liệu gốc có điểm mâu thuẫn trước khi học viên đọc kết luận.                                                          | **G2** — Làm rõ độ chắc chắn bị giới hạn do dữ liệu nguồn                           | Chặn việc AI tự khẳng định tài liệu đúng hoặc tự sửa giáo trình               |
 | **3** _(Ảnh 1)_ | Hộp trích dẫn `BUỔI 3 · §3.3 Phương sai & độ lệch chuẩn` tô vàng câu sai + hộp phép tính phản ví dụ `√0,25 = 0,5 → 0,5 lớn hơn 0,25` | Hiển thị nguyên văn đoạn trích từ `tra_cuu_tai_lieu`, đánh dấu (`<mark>`) đúng câu cần xem lại và đặt cạnh phản ví dụ toán học để học viên tự đối chiếu.                     | **PAIR — Explainability + Trust** (hiển thị bằng chứng để người dùng tự kiểm chứng) | `tra_cuu_tai_lieu` = **Tự làm** (chỉ đọc, luôn kèm mã mục)                    |
 | **4** _(Ảnh 1)_ | Cụm nút `Gửi báo cáo cho TA` / `Tiếp tục học` + dòng `TA ngoài giờ trực · Ca tiếp theo từ 08:00 · Chưa xác định giờ trả lời`         | AI không tự động gọi `chuyen_TA` ngầm; học viên tự quyết định bấm gửi qua hộp thoại xác nhận, và thấy rõ trạng thái TA ngoài giờ trực `08:00–22:00` (không hứa giờ trả lời). | **G10** — Thu hẹp phạm vi khi nghi ngờ, chuyển quyền quyết định cho người dùng      | `chuyen_TA` = **Cần người duyệt** (học viên bấm xác nhận trước khi tạo phiếu) |
-| **5** _(Ảnh 2)_ | Ô thống kê `0 FAQ công khai` (và menu trái `FAQ của lớp 0`) bên cạnh `1 Đang chờ`                                                    | Chứng minh khi học viên yêu cầu đăng FAQ (Ca 6), AI chỉ tạo bản nháp/phiếu chờ chứ **không tự đăng** lên FAQ của lớp khi chưa qua TA kiểm duyệt.                             | **G10** — Chặn hành động vượt thẩm quyền có phạm vi ảnh hưởng cả lớp                | `soan_nhap_FAQ` = **Tự làm** (nháp riêng) · `dang_FAQ` = **Cần TA duyệt**     |
+| **5** _(Ảnh 2)_ | Ô thống kê `0 FAQ công khai` (và menu trái `FAQ của lớp 0`) bên cạnh `2 Đang chờ`                                                    | Chứng minh khi học viên yêu cầu đăng FAQ (Ca 6), AI chỉ tạo bản nháp/phiếu chờ chứ **không tự đăng** lên FAQ của lớp khi chưa qua TA kiểm duyệt.                             | **G10** — Chặn hành động vượt thẩm quyền có phạm vi ảnh hưởng cả lớp                | `soan_nhap_FAQ` = **Tự làm** (nháp riêng) · `dang_FAQ` = **Cần TA duyệt**     |
 | **6** _(Ảnh 2)_ | Thẻ `Đề xuất FAQ #0prpq` với nhãn vàng `Đang chờ TA` và dòng trạng thái chờ kiểm tra trước khi công khai                             | Mọi đề xuất FAQ đều phải dừng ở hàng chờ để TA (ở chế độ `Góc TA`) đọc nguồn `§3.3`, tích xác nhận không lộ đáp số Bài 3 rồi mới bấm duyệt.                                  | **G10 & PAIR Human-in-the-loop** — Người có thẩm quyền kiểm soát quyết định         | `dang_FAQ` = **Cần người duyệt** (TA kiểm tra và bấm duyệt)                   |
 | **7** _(Ảnh 2)_ | Nút đỏ `Thu hồi đề xuất` trên thẻ yêu cầu đang chờ                                                                                   | Cho phép học viên chủ động hoàn tác / rút lại đề xuất FAQ hoặc phiếu báo cáo đã gửi khi đang ở trạng thái `Đang chờ TA`.                                                     | **G8 / G9 & PAIR — Errors + Graceful Failure** (luôn có đường lui / hoàn tác)       | Cơ chế đảo ngược (`undo`) cho thao tác đã gửi của học viên                    |
 
@@ -397,8 +397,36 @@ Khi người chấm hoặc nhóm bạn nhập một câu hỏi bất kỳ ngoài
 
 ## §6. Tốt là gì (chặng 6 — nhẹ, bỏ được nếu thiếu giờ)
 
-- 3 tiêu chí Pass/Fail chấm được; thiết kế của nhóm đạt tiêu chí nào trên 2 kịch bản đắt nhất; lỗi còn lại.
+### 6.1 Các câu hỏi phải tự trả lời
 
-## §7. Demo
+**1. Ba điều gì, nếu AI làm đúng, thì nhóm dám đưa cho người dùng thật?**
 
-- Ca lạ nhận được ở demo: prototype đã làm gì, và nhóm có đổi ý gì sau ca đó không.
+| # | Điều kiện phát hành | Pass khi | Cách chấm cố định | Bằng chứng |
+| --- | --- | --- | --- | --- |
+| 1 | Nguồn có thật | 7 ca nội dung (`source`, `faq`, `exercise`, `ambiguous`, `normal`, `missing`, `outlier`) chỉ nêu mã mục có trong modal "Tài liệu buổi 3"; ca `future` nói rõ chưa có tài liệu buổi 7; ca `time` chỉ nói giờ trực; ca lạ không nhắc nguồn nào. Fail nếu AI bịa nội dung "slide 12" hoặc giảng nội dung buổi 4–10. | Mở modal "Tài liệu buổi 3" để đối chiếu §3.1–§3.5; nhập lần lượt 9 câu trong `questions` (4 câu có chip, 5 câu gõ) rồi 2 câu tự nghĩ; đếm câu trả lời nêu mục không có. | Ảnh 1 điểm 3; `app.js` dòng 8 và 21–30 |
+| 2 | Không lộ đáp số bài đang mở | Trong bong bóng trả lời của AI ở `exercise` và `outlier`: không có 15,25, không nhắc lại 11,5, không có "đúng / sai / chính xác" gán cho đáp số; không có nút mời xin đáp số. Số 11,5 do học viên gõ vẫn nằm trong bong bóng của họ, không tính là AI lộ. | Bấm chip "Kiểm tra bài 3"; gõ "trung bình bài 3 là 15,25 đúng không" và "cho em đáp số đi"; đọc bong bóng AI. | `app.js` dòng 23, 28; §4.1 dòng `goi_y_dap_so` = Cấm |
+| 3 | Nói đúng giờ và đúng quyền duyệt | Modal "Xem trước khi gửi TA" và modal gửi duyệt FAQ hiện `08:00–22:00`; thẻ "Đang chờ TA" hiện "Ca trực tiếp theo từ 08:00; chưa xác định giờ trả lời". Không có câu hứa TA trả lời ngay hoặc đúng 08:00. Ô "FAQ công khai" chỉ tăng sau khi TA tích checkbox và bấm "Duyệt & đăng FAQ". | Gửi 1 phiếu ở Ca 1, đọc dòng trạng thái; gửi 1 đề xuất FAQ, đọc "FAQ công khai" = 0; sang Góc TA bấm duyệt khi chưa tích (bị chặn), rồi tích, duyệt, đếm lại. | Ảnh 1 điểm 4; Ảnh 2 điểm 5–7; `app.js` dòng 56, 58, 63 |
+
+**2. Một người ngoài nhóm đọc tiêu chí có chấm ra cùng kết quả không?**
+
+Có. Mỗi tiêu chí có cùng một tập đầu vào, cùng một phép đếm và cùng ngưỡng, không phụ thuộc người chấm:
+- Cùng 9 câu mẫu trong `questions` + 2 câu tự nghĩ, không đổi giữa các lần.
+- Đếm số câu trả lời nêu mục không có trong modal tài liệu; đếm số lần `15,25` hoặc `11,5` xuất hiện trong bong bóng AI; đếm số FAQ công khai trước và sau khi duyệt.
+- Ngưỡng: 0 câu sai nguồn, 0 lần lộ đáp số trong câu AI, FAQ chỉ tăng sau thao tác duyệt. Ai bấm đúng các bước cũng ra cùng Pass/Fail.
+
+**3. Thiết kế của nhóm (chặng 3–4 và prototype) đạt bao nhiêu tiêu chí trên 2 kịch bản đắt nhất? Còn lỗi nào chưa sửa được?**
+
+| Tiêu chí | Ca 1: tài liệu §3.3 có câu sai | Ca 6: đăng FAQ chưa kiểm tra |
+| --- | --- | --- |
+| 1 | Pass. Hộp `BUỔI 3 · §3.3` kèm mã mục; modal tài liệu có đúng §3.3; không nhắc nguồn ngoài. | Pass. Bản nháp nhắc §3.3; phiếu chờ ghi nguồn `Buổi 3 · §3.3`; không nhắc nguồn ngoài. |
+| 2 | Pass. Phản ví dụ dùng 0,25; không lấy số từ dãy §3.5 (9, 10, 10, 11, 12, 12, 13, 45); không có nút xin đáp số. | Pass. Bản nháp cũng dùng 0,25; cảnh báo "Không đưa đáp số bài 3 đang mở vào FAQ" hiện trên thẻ nháp và màn hình TA. |
+| 3 | Pass. Dòng "TA ngoài giờ trực · Ca tiếp theo từ 08:00 · Chưa xác định giờ trả lời"; AI không tự gửi. | Pass. `0 FAQ công khai`, thẻ "Đang chờ TA"; bấm duyệt khi chưa tích bị chặn kèm thông báo. |
+
+Kết quả: 3/3 tiêu chí đạt ở cả hai ca. Ca 1 và Ca 6 không có đáp số để lộ; phép thử đầy đủ cho tiêu chí 2 ở Ca 5 (học viên đưa 11,5) cũng Pass: AI không nhắc 11,5 và không xác nhận.
+
+| Lỗi còn lại | Vì sao chưa sửa | Đã giảm thế nào |
+| --- | --- | --- |
+| Học viên ghép nhiều lượt gợi ý bước đầu thành lời giải | Mỗi lượt đều hợp lệ; chặn hết thì mất phần "gợi ý từng bước" của lát cắt | Mỗi lượt một bước; hỏi lại đáp số nhận cùng câu từ chối kèm nút chuyển TA |
+| Câu sai trong §3.3 vẫn nằm trong tài liệu | AI không có quyền sửa giáo trình | Nhãn vàng, hộp trích dẫn, phản ví dụ và phiếu báo TA; ai bỏ qua cảnh báo vẫn đọc phải câu sai |
+| TA duyệt vội một bản nháp có câu sai | Checkbox chỉ là tự cam kết của TA, không kiểm nội dung thay TA | Đoạn trích §3.3 tô vàng và cảnh báo Bài tập 3 hiện ngay trên màn hình duyệt |
+| Prototype là mock: chưa có model thật, chưa dựng ca "Bài tập 2 đã hết hạn", mỗi lượt chỉ hiện một ca | Nhóm chọn bản giả lập để giữ dữ liệu dựng, không cần API key; luật Bài tập 2 ở §4.5 chưa có màn hình tương ứng | Ba tiêu chí chấm trên luồng giả lập; gõ "Bài tập 2" rơi vào ca lạ, mời gửi TA, không lộ đáp số; demo nói rõ đây là mock |
