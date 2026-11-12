@@ -1,18 +1,12 @@
-# Dàn ý bài nộp _(spec.md — nộp trước 23:59 ngày lab của lớp)_
-
-> Copy dàn ý này vào `spec.md` của nhóm. Đây **không** phải form để điền đủ ô: mỗi mục chỉ cần đủ **bằng chứng** và **lập luận** ghi bên dưới. Viết ngắn, gạch đầu dòng là được. Hướng dẫn từng chặng: `02-guide.md`. Cách chấm: `04-rubric.md`.
->
-> **Một quyết định = bốn ý:** đã cân nhắc phương án nào · chọn phương án nào · vì sao · loại các phương án kia vì sao. Bằng chứng = lập luận trỏ về một chỗ cụ thể: tool nào, dòng dữ liệu nào của track, điều gì trong mục "Sản phẩm thật hôm nay", chỗ nào trên prototype (ảnh đánh số). Không chạy agent.
-
 # Bài nộp LAB5 — T2 Giáo dục · Nhóm DKH
 
 **Lớp:** L3A · **Bàn / zone:** \_\_\_\_ · **Track:** T2 — Giáo dục (trợ lý học bài tối muộn, khi không còn ai để hỏi)
 
 | Họ và Tên        | Mã Học Viên | Việc đã làm |
 | ---------------- | ----------- | ----------- |
-| Trịnh Công Đức   | 2A202603527 |             |
-| Nguyễn Xuân Hùng | 2A202603599 |             |
-| Nguyễn Tuấn Kiệt | 2A202603417 |             |
+| Trịnh Công Đức   | 2A202603527 | Trưởng nhóm. Viết §1 (lát cắt, 3 việc không làm) và §4 (mức tự chủ của 6 tool, tool khó xếp nhất, thử mức trên 3 kịch bản, luật tách bước). Gộp các phần thành `spec.md` và dọn repo. |
+| Nguyễn Xuân Hùng | 2A202603599 | Viết §2 (8 kịch bản rủi ro phủ 4 lớp, 2 kịch bản đắt nhất) và §5 (thiết kế prototype). Dựng prototype trong `prototype/` (HTML, CSS, JavaScript), chụp 2 ảnh đánh số, viết README prototype. |
+| Nguyễn Tuấn Kiệt | 2A202603417 | Viết §3 (khi AI sai ở Ca 1 và Ca 6, bốn đường đi, nguyên tắc HAX/PAIR) và §6 (3 tiêu chí Pass/Fail, chấm thử trên 2 kịch bản đắt nhất, lỗi còn lại). |
 
 ---
 
@@ -215,9 +209,9 @@ Thang mức: **tự làm** / **cần người duyệt** / **cấm**. Hai tool đ
 | `tra_cuu_tai_lieu`                                                                                          | **Tự làm**                | —                                                                         | Chỉ đọc, không có gì để đảo                                                           |
 | `goi_y_buoc_dau` _(tách từ `goi_y_bai_tap`)_                                                                | **Tự làm, khoá nội dung** | —                                                                         | Không đảo được, nên chặn từ trước bằng khoá nội dung (xem 4.2)                        |
 | `goi_y_dap_so` _(phần còn lại của `goi_y_bai_tap`: đưa hoặc xác nhận đáp số bài đang mở, viết nhận xét hộ)_ | **Cấm**                   | —                                                                         | Không có nút, AI không được cấp quyền                                                 |
-| `chuyen_TA`                                                                                                 | **Cần người duyệt**       | Học viên bấm xác nhận trên thẻ                                            | Có nút "Hoàn tác / Huỷ phiếu" sau khi gửi                                             |
-| `soan_nhap_FAQ` _(tách từ `dang_FAQ`)_                                                                      | **Tự làm**                | —                                                                         | Nút "Huỷ bản nháp", chưa ai khác thấy                                                 |
-| `dang_FAQ`                                                                                                  | **Cần người duyệt**       | TA (hoặc giảng viên) bấm "Duyệt và gọi `dang_FAQ`" trên màn hình quản trị | Gỡ được, nhưng người đã đọc thì không thu hồi được, nên chặn từ trước bằng bước duyệt |
+| `chuyen_TA`                                                                                                 | **Cần người duyệt**       | Học viên bấm xác nhận trên thẻ                                            | Có nút "Hoàn tác / Hủy phiếu" sau khi gửi                                             |
+| `soan_nhap_FAQ` _(tách từ `dang_FAQ`)_                                                                      | **Tự làm**                | —                                                                         | Nút "Hủy bản nháp", chưa ai khác thấy                                                 |
+| `dang_FAQ`                                                                                                  | **Cần người duyệt**       | TA (hoặc giảng viên) trong Góc TA: "Kiểm tra / Sửa & duyệt", tích ô xác nhận, rồi bấm "Duyệt & đăng FAQ" | Gỡ được, nhưng người đã đọc thì không thu hồi được, nên chặn từ trước bằng bước duyệt |
 
 ### 4.2 Lý do từng tool theo cost-of-error
 
@@ -249,7 +243,7 @@ Thang mức: **tự làm** / **cần người duyệt** / **cấm**. Hai tool đ
 - **Ai duyệt · thấy gì:** học viên. Hộp thoại xác nhận hiện câu hỏi sửa được, ô ghi chú, mã mục liên quan, và dòng trạng thái lấy thẳng từ trường Giờ TA ("TA trực 08:00–22:00. Hiện ngoài giờ trực; chưa xác định thời gian trả lời").
 - **Quá hạn thì sao:** học viên không bấm thì không có phiếu nào được tạo, AI không tự gửi và không nói "đã báo TA". Phiếu đã gửi nằm trong hàng chờ cho tới khi TA xử lý; học viên thấy trạng thái "Đang chờ TA · Ca trực tiếp theo từ 08:00; chưa xác định giờ trả lời" chứ không phải một giờ trả lời được hứa.
 - **Sai thì ai chịu gì:** gửi thừa thì TA mất công đọc phiếu không cần thiết và hàng chờ của người duy nhất có thể "chuyển" bị loãng; gửi khi học viên chưa đồng ý thì nội dung bài làm dở bị TA thấy ngoài ý học viên; nặng nhất là học viên nghe "đã báo TA" rồi ngừng tìm cách khác, thức chờ qua đêm (Ca 4).
-- **Đảo lại được không:** được (huỷ phiếu), nhưng TA có thể đã đọc.
+- **Đảo lại được không:** được (hủy phiếu), nhưng TA có thể đã đọc.
 - **Chờ người thì mất gì:** một cú bấm của chính học viên, vài giây. Bước xác nhận rất rẻ nên chặn được rủi ro mà không làm chậm.
 - **Phương án đã loại:** _tự làm_ (AI tự chuyển mỗi khi không chắc) vì hàng chờ TA sẽ tràn khi cả lớp cùng hỏi tối muộn, và AI dễ nói "đã báo TA" khi chưa có xác nhận; _cấm_ vì bỏ mất đường lui duy nhất khi tài liệu có câu sai (Ca 1), trong khi sản phẩm thật hôm nay không có ai để chuyển.
 - **Người nhận:** TA là người nhận duy nhất AI chạm tới, bảng tool không có tool nào gửi thẳng giảng viên; TA xác nhận lỗi tài liệu rồi tự chuyển giảng viên sửa, ngoài hệ thống trợ lý.
@@ -257,13 +251,13 @@ Thang mức: **tự làm** / **cần người duyệt** / **cấm**. Hai tool đ
 #### `soan_nhap_FAQ` → tự làm
 
 - **Sai thì ai chịu gì:** bản nháp sai chỉ nằm trong khung chat riêng, nhãn "Chưa công khai (Chỉ mình bạn thấy)"; người nhìn thấy và chịu là chính học viên đó.
-- **Đảo lại được không:** được, nút "Huỷ bản nháp", chưa ai khác đọc.
+- **Đảo lại được không:** được, nút "Hủy bản nháp", chưa ai khác đọc.
 - **Chờ người thì mất gì:** nếu bắt duyệt thì TA phải duyệt cả những bản nháp chưa ai gửi, tăng việc cho người ít thời gian nhất.
 - **Phương án đã loại:** _cần người duyệt_ vì bản nháp chưa tác động tới ai; _cấm_ vì mất đường cho học viên có sẵn bản soạn để TA xem, TA phải viết lại từ đầu.
 
 #### `dang_FAQ` → cần người duyệt (TA)
 
-- **Ai duyệt · thấy gì:** TA (hoặc giảng viên) trên màn hình quản trị: câu hỏi, câu trả lời của AI, mã mục tài liệu trích dẫn, đoạn trích có đánh dấu câu cần xem lại (nếu có), cảnh báo nếu nội dung chạm Bài tập 3 đang mở, và hai nút "Duyệt và gọi `dang_FAQ`" / "Sửa / Từ chối".
+- **Ai duyệt · thấy gì:** TA (hoặc giảng viên) trong Góc TA: câu hỏi, câu trả lời của AI, mã mục tài liệu trích dẫn, đoạn trích có đánh dấu câu cần xem lại (nếu có) và cảnh báo nếu nội dung chạm Bài tập 3 đang mở. Nút "Kiểm tra / Sửa & duyệt" mở hộp thoại có ô tích bắt buộc ("Tôi đã kiểm tra tính đúng đắn, nguồn và không có đáp số bài đang mở") trước khi bấm "Duyệt & đăng FAQ"; ngoài ra có nút "Từ chối kèm lý do".
 - **Quá hạn thì sao:** không ai duyệt thì không đăng. Gửi sau 22:00 thì TA thấy phiếu từ 08:00 sáng hôm sau. Mặc định an toàn là FAQ giữ nguyên; bản nháp hiện "Đang chờ TA duyệt" và không bao giờ tự đăng khi hết chờ. Học viên không bị kẹt vì câu trả lời riêng của họ vẫn nằm trong khung chat.
 - **Sai thì ai chịu gì:** cả lớp, không chỉ người hỏi, đọc một câu sai hoặc lộ gợi ý Bài tập 3 trước giờ nộp. Đây là kiểu sai âm thầm nhân lên theo số người đọc.
 - **Đảo lại được không:** gỡ bài được, nhưng bảng tool ghi "nhiều người đã đọc": thu hồi cái đã đọc thì không.
@@ -430,3 +424,9 @@ Kết quả: 3/3 tiêu chí đạt ở cả hai ca. Ca 1 và Ca 6 không có đ�
 | Câu sai trong §3.3 vẫn nằm trong tài liệu | AI không có quyền sửa giáo trình | Nhãn vàng, hộp trích dẫn, phản ví dụ và phiếu báo TA; ai bỏ qua cảnh báo vẫn đọc phải câu sai |
 | TA duyệt vội một bản nháp có câu sai | Checkbox chỉ là tự cam kết của TA, không kiểm nội dung thay TA | Đoạn trích §3.3 tô vàng và cảnh báo Bài tập 3 hiện ngay trên màn hình duyệt |
 | Prototype là mock: chưa có model thật, chưa dựng ca "Bài tập 2 đã hết hạn", mỗi lượt chỉ hiện một ca | Nhóm chọn bản giả lập để giữ dữ liệu dựng, không cần API key; luật Bài tập 2 ở §4.5 chưa có màn hình tương ứng | Ba tiêu chí chấm trên luồng giả lập; gõ "Bài tập 2" rơi vào ca lạ, mời gửi TA, không lộ đáp số; demo nói rõ đây là mock |
+
+## §7. Demo
+
+- **Ca lạ nhận được ở demo:** _(điền sau buổi demo)_
+- **Prototype đã làm gì với ca đó:** _(điền sau buổi demo)_
+- **Nhóm có đổi ý gì sau ca đó không:** _(điền sau buổi demo)_
